@@ -45,6 +45,13 @@ nav ul li {
     margin-right: 6px;
 }
 
+@media screen and (max-width: 400px) {
+    nav ul li {
+        margin: 15px 0; /* Adiciona espaço vertical em telas menores */
+        display: block; /* Altera para o modo de bloco para garantir que os itens da lista sejam exibidos verticalmente */
+    }
+}
+
 nav ul li a {
     text-decoration: none;
     color: #fff;
