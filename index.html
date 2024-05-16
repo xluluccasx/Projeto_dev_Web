@@ -11,7 +11,7 @@
         <h1>Lucas Netto</h1>
         <nav>
             <ul>
-                <li><button onclick="https://xluluccasx.github.io/Projeto_dev_Web/('sobre.html')">Sobre Mim</button></li>
+                <li><button onclick="carregarPagina('sobre.html')">Sobre Mim</button></li>
                 <li><button onclick="carregarPagina('formacao.html')">Formação</button></li>
                 <li><button onclick="carregarPagina('portfolio.html')">Portfólio</button></li>
                 <li><button onclick="carregarPagina('contato.html')">Contato</button></li>
@@ -21,7 +21,7 @@
 
     <section id="sobre">
         <h2>Sobre Mim</h2>
-        <p>Insira informações sobre você, seus hobbies, interesses, etcasd asdasd.</p>
+        <p>Insira informações sobre você, seus hobbies, interesses, etc.</p>
     </section>
 
     <section id="formacao">
@@ -50,7 +50,20 @@
     <footer>
         <p>&copy; 2024 Seu Nome</p>
     </footer>
-
+    <script>
+        function carregarPagina(pagina) {
+            // Usa fetch() para carregar o conteúdo da página
+            fetch(pagina)
+            .then(response => response.text())
+            .then(data => {
+                // Insere o conteúdo da página na seção de conteúdo
+                document.getElementById('conteudo').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+        }
+    </script>
     <script>
         document.getElementById('formulario-contato').addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o envio do formulário padrão
