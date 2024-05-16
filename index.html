@@ -51,20 +51,6 @@
         <p>&copy; 2024 Seu Nome</p>
     </footer>
     <script>
-        function carregarPagina(pagina) {
-            // Usa fetch() para carregar o conteúdo da página
-            fetch(pagina)
-            .then(response => response.text())
-            .then(data => {
-                // Insere o conteúdo da página na seção de conteúdo
-                document.getElementById('conteudo').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
-        }
-    </script>
-    <script>
         document.getElementById('formulario-contato').addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o envio do formulário padrão
 
@@ -88,6 +74,20 @@
                 console.error('Erro:', error);
             });
         });
+
+        function carregarPagina(pagina) {
+            // Usa fetch() para carregar o conteúdo da página
+            fetch(pagina)
+            .then(response => response.text())
+            .then(data => {
+                // Insere o conteúdo da página na seção de conteúdo
+                document.getElementById('conteudo').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+            });
+        }
+
     </script>
 </body>
 </html>
