@@ -20,9 +20,9 @@
     <section id="Sobre">
         <h2 style="text-align: center;">Sobre Mim</h2>
         <div class="slideshow">
-            <button class="prev" onclick="prevImage()">&#10094;</button>
-            <img class="imagem" src="img/img4.jpg" alt="Descrição da imagem" width="300" height="200" style="border-radius: 50px;">
-            <button class="next" onclick="nextImage()">&#10095;</button>
+            <button class="prev" onclick="imgAnt()">&#10094;</button>
+            <img class="imagem" src="img/img1.jpg" alt="Descrição da imagem" width="300" height="200" style="border-radius: 50px;">
+            <button class="next" onclick="imgProx()">&#10095;</button>
         </div>
         <p>Insira informações sobre você, seus hobbies, interesses, etc.</p>
     </section>
@@ -37,9 +37,8 @@
     "img/img5.jpg",
     "img/img6.jpg",
     "img/img7.jpg"
-];
-    
-        function prevImage() {
+];   
+        function imgAnt() {
             if (currentImageIdx > 0) {
                 currentImageIdx--;
             } else {
@@ -48,7 +47,7 @@
             updateImage();
         }
     
-        function nextImage() {
+        function imgProx() {
             if (currentImageIdx < images.length - 1) {
                 currentImageIdx++;
             } else {

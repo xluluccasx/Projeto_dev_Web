@@ -112,8 +112,7 @@ footer {
 
 .prev, .next {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0%;
     width: 50px;
     height: 50px;
     background: rgba(0, 0, 0, 0.5);
@@ -121,6 +120,14 @@ footer {
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.prev:hover, .prev:focus,
+.next:hover, .next:focus {
+    background-color: #585858;
+    color: #ffffff;
 }
 
 .prev {
