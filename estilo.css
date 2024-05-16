@@ -103,3 +103,30 @@ footer {
     height: auto; /* Permite que a altura seja ajustada automaticamente */
     margin: 0 auto; /* Centraliza horizontalmente a imagem */
 }
+
+.slideshow {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
