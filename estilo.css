@@ -96,3 +96,10 @@ footer {
     vertical-align: top; /* Faz com que o texto se desloque para baixo */
     margin-top: 5px; /* Adiciona um espaço entre o label e o textarea */
 }
+
+.imagem {
+    display: block; /* Torna a imagem um bloco para permitir o uso de margens e preenchimentos */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    height: auto; /* Permite que a altura seja ajustada automaticamente */
+    margin: 0 auto; /* Centraliza horizontalmente a imagem */
+}
