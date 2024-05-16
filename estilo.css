@@ -36,6 +36,7 @@ header h1 {
 
 nav ul {
     display: inline-block;
+    text-align: center;
     list-style: none;
     padding: 0;
     text-align: center;
