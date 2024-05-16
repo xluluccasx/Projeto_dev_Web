@@ -35,7 +35,10 @@ header h1 {
 }
 
 nav ul {
+    display: inline-block;
     list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
 nav ul li {
