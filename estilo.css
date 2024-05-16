@@ -13,6 +13,10 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
     background-color: #333;
     color: #fff;
     padding: 10px 0;
@@ -20,6 +24,10 @@ header {
     width: 100%;
     top: 0;
     z-index: 999;
+}
+
+.container {
+    text-align: center; /* Alinha o texto dentro do contêiner */
 }
 
 header h1 {
