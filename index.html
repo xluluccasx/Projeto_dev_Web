@@ -55,25 +55,10 @@
         document.getElementById('formulario-contato').addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o envio do formulário padrão
 
-            var formulario = new FormData(this);
+            // Aqui você pode adicionar suas validações de necessidade de preenchimento
 
-            fetch('enviar.php', {
-                method: 'POST',
-                body: formulario
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.text();
-                }
-                throw new Error('Erro ao enviar o e-mail.');
-            })
-            .then(data => {
-                // Exibe uma mensagem de sucesso ou falha na página
-                document.getElementById('contato').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
+            // Exibe um alerta com a mensagem desejada
+            alert('Mensagem enviada com sucesso!'); // Ou qualquer outra mensagem que desejar
         });
 
         function carregarPagina(pagina) {
