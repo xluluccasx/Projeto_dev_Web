@@ -53,12 +53,8 @@
     </footer>
     <script>
         document.getElementById('formulario-contato').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio do formulário padrão
-
-            // Aqui você pode adicionar suas validações de necessidade de preenchimento
-
-            // Exibe um alerta com a mensagem desejada
-            alert('Mensagem enviada com sucesso!'); // Ou qualquer outra mensagem que desejar
+            event.preventDefault();
+            alert('Para envio do email, precisaria configurar um serv SMTP, não irei realizar esta configuração'); 
         });
 
         function carregarPagina(pagina) {
