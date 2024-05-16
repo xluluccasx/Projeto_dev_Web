@@ -23,20 +23,5 @@
     <footer>
         <p>&copy; Lucas Netto RU - 4250816</p>
     </footer>
-    <script>
-        function carregarPagina(pagina) {
-            // Usa fetch() para carregar o conteúdo da página
-            fetch(pagina)
-            .then(response => response.text())
-            .then(data => {
-                // Insere o conteúdo da página na seção de conteúdo
-                document.getElementById('conteudo').innerHTML = data;
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-            });
-        }
-
-    </script>
 </body>
 </html>

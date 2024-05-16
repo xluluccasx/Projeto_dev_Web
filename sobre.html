@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mim - Lucas Netto</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -38,28 +39,6 @@
     "img/img6.jpg",
     "img/img7.jpg"
 ];   
-        function imgAnt() {
-            if (currentImageIdx > 0) {
-                currentImageIdx--;
-            } else {
-                currentImageIdx = images.length - 1; // Retorna à última imagem se estiver na primeira
-            }
-            updateImage();
-        }
-    
-        function imgProx() {
-            if (currentImageIdx < images.length - 1) {
-                currentImageIdx++;
-            } else {
-                currentImageIdx = 0; // Retorna à primeira imagem se estiver na última
-            }
-            updateImage();
-        }
-    
-        function updateImage() {
-            var imageElement = document.querySelector('.imagem');
-            imageElement.src = images[currentImageIdx];
-        }
     </script>
     <footer>
         <p>&copy; Lucas Netto RU - 4250816</p>
