@@ -82,3 +82,9 @@ footer {
 #Contato {
     text-align: center; /* Alinha o conteúdo ao centro horizontalmente */
 }
+
+#mensagem {
+    display: inline-block; /* Permite que o textarea fique ao lado do label */
+    vertical-align: top; /* Faz com que o texto se desloque para baixo */
+    margin-top: 5px; /* Adiciona um espaço entre o label e o textarea */
+}
