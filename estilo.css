@@ -78,3 +78,7 @@ footer {
     bottom: 0;
     left: 0;
 }
+
+#Contato {
+    text-align: center; /* Alinha o conteúdo ao centro horizontalmente */
+}
