@@ -18,10 +18,42 @@
         </nav>
     </section>
     <section id="Sobre">
-    <h2>Sobre Mim</h2>
-    <img class="imagem" src="img/img7.jpg" alt="Descrição da imagem">
-    <p>Insira informações sobre você, seus hobbies, interesses, etc.</p>
+        <h2 style="text-align: center;">Sobre Mim</h2>
+        <div class="slideshow">
+            <button class="prev" onclick="antImage()">&#10094;</button>
+            <img class="imagem" src="img/img1.jpg" alt="Descrição da imagem" width="300" height="200" style="border-radius: 50px;">
+            <button class="next" onclick="proxImage()">&#10095;</button>
+        </div>
+        <p>Insira informações sobre você, seus hobbies, interesses, etc.</p>
     </section>
+    
+    <script>
+        var currentImageIndex = 0;
+        var images = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg", "img/img4.jpg", "img/img5.jpg", "img/img6.jpg", "img/img7.jpg"];
+    
+        function antImage() {
+            if (currentImageIndex > 0) {
+                currentImageIndex--;
+            } else {
+                currentImageIndex = images.length - 1; // Retorna à última imagem se estiver na primeira
+            }
+            updateImage();
+        }
+    
+        function proxImage() {
+            if (currentImageIndex < images.length - 1) {
+                currentImageIndex++;
+            } else {
+                currentImageIndex = 0; // Retorna à primeira imagem se estiver na última
+            }
+            updateImage();
+        }
+    
+        function updateImage() {
+            var imageElement = document.querySelector('.imagem');
+            imageElement.src = images[currentImageIndex];
+        }
+    </script>
     <footer>
         <p>&copy; Lucas Netto RU - 4250816</p>
     </footer>
