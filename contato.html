@@ -29,5 +29,14 @@
             <button type="submit">Enviar</button>
         </form>
     </section>
+    <footer>
+        <p>&copy; Lucas Netto RU - 4250816</p>
+    </footer>
+    <script>
+        document.getElementById('formulario-contato').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Para envio do email, precisaria configurar um serv SMTP, não irei realizar esta configuração'); 
+        });
+    </script>
 </body>
 </html>
