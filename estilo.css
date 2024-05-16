@@ -26,8 +26,13 @@ header h1 {
     margin-left: 20px;
 }
 
+.container {
+    text-align: center; /* Define o alinhamento do texto no centro */
+}
+
 nav ul {
-    list-style: none;
+    display: inline-block; /* Torna a lista de navegação em linha */
+    padding: 0; /* Remove o espaçamento interno */
 }
 
 nav ul li {
