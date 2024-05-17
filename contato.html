@@ -1,56 +1,58 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Declaração do tipo de documento -->
+<html lang="pt-br"> <!-- Define o idioma da página -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Netto - Contato</title>
-    <link rel="stylesheet" href="estilo.css">
-    <script src="script.js"></script>
-    <php src="envioEmail.php"></php>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a largura da página como o dispositivo e a escala inicial -->
+    <title>Lucas Netto - Contato</title> <!-- Título da página -->
+    <link rel="stylesheet" href="estilo.css"> <!-- Importa o arquivo de estilos -->
+    <script src="script.js"></script> <!-- Importa o arquivo de scripts -->
+    <php src="envioEmail.php"></php> <!-- Não executável PHP para inclusão do script de envio de email -->
 </head>
 <body>
     <header>
-        <h1>Lucas Netto</h1>
+        <h1>Lucas Netto</h1> <!-- Título principal da página -->
     </header>
     <section id="botoes">
         <nav>
             <ul>
-                <li><a href='index.html'>Voltar</a></li>
+                <li><a href='index.html'>Voltar</a></li> <!-- Link de retorno à página inicial -->
             </ul>
         </nav>
     </section>
     <section id="Contato">
-        <h2>Contato</h2>
-        <form id="enviarEmail" action="envioEmail.php" method="POST">
+        <h2>Contato</h2> <!-- Título da seção de contato -->
+        <form id="enviarEmail" action="envioEmail.php" method="POST"> <!-- Formulário para envio de email -->
             <div class="row">
                 <div class="form-group col-md-5">
                     <div class="form-control-custom">
-                        <label for="nome">Nome:</label>
+                        <label for="nome">Nome:</label> <!-- Campo para inserção do nome -->
                         <input type="text" class="form-control form-control-lg py-3 text-2 mt-2" id="nome" name="nome" placeholder="Nome Completo" required>
                     </div>
                 </div>
                 <div class="form-group col-md-4">
                     <div class="form-control-custom">
-                        <label for="email">Email:</label>
+                        <label for="email">Email:</label> <!-- Campo para inserção do email -->
                         <input type="email" class="form-control form-control-lg py-3 text-2 mt-2" id="email" name="email" placeholder="Email" required>
                     </div>
                 </div>
                 <div class="form-group col-md-3">
                     <div class="form-control-custom">
-                        <label for="mensagem">Mensagem:</label>
+                        <label for="mensagem">Mensagem:</label> <!-- Campo para inserção da mensagem -->
                         <textarea id="mensagem" class="form-control form-control-lg py-3 text-2 mt-2" name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
                     </div>
                 </div>
             </div>
             <div class="form-group col-md-3">
-                <button type="submit" class="btn btn-primary font-weight-bold text-uppercase py-3 w-100 mt-2">Enviar Agora</button>
+                <button type="submit" class="btn btn-primary font-weight-bold text-uppercase py-3 w-100 mt-2">Enviar Agora</button> <!-- Botão de envio do formulário -->
             </div>
         </form>
     </section>
-
+<!-- Script para evitar o envio padrão do formulário -->
+<!-- Previne o envio padrão do formulário -->
+<!-- Alerta exibido ao tentar enviar o formulário -->
     <script>
-        document.getElementById('enviarEmail').addEventListener('submit', function(event) {
-            event.preventDefault();
+        document.getElementById('enviarEmail').addEventListener('submit', function(event) { 
+            event.preventDefault(); 
             alert('Não consegui fazer funcionar esta funcionalidade, a parte visual está pronta não consegui localizar o porque não executa, estava dando erro 405, ou ele puxava apenas o php criado. Possivelmente eu precisaria configurar um servidor SMTP para realizar os envios');
         });
     </script>

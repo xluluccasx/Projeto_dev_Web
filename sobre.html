@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head>    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Netto - Quem eu sou?</title>
-    <link rel="stylesheet" href="estilo.css">
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Lucas Netto - Quem eu sou?</title><!-- Título da página -->    
+    <link rel="stylesheet" href="estilo.css"><!-- Link para o arquivo de estilos -->    
+    <script src="script.js"></script><!-- Link para o arquivo de scripts -->
 </head>
 <body>
-    <header>
+    <header><!-- Cabeçalho da página -->
         <h1>Lucas Netto</h1>
     </header>
-    <section id="botoes">
+    <section id="botoes"><!-- Seção para os botões de navegação -->
         <nav>
             <ul>
-                <li><a href='index.html'>Voltar</a></li>
+                <li><a href='index.html'>Voltar</a></li><!-- Botão para voltar à página inicial -->
             </ul>
         </nav>
     </section>
     <section id="Sobre">
-        <h2 style="text-align: center;">Quem eu sou?</h2>
-        <div class="slideshow">
-            <button class="prev" onclick="imgAnt()">&#10094;</button>
-            <img class="imagem" src="img/img1.jpg" alt="Descrição da imagem" width="300" height="200" style="border-radius: 50px;">
-            <button class="next" onclick="imgProx()">&#10095;</button>
+        <h2 style="text-align: center;">Quem eu sou?</h2><!-- Título -->      
+        <div class="slideshow"><!-- Slideshow com botões de navegação para as imagens -->            
+            <button class="prev" onclick="imgAnt()">&#10094;</button><!-- Botão para a imagem anterior -->           
+            <img class="imagem" src="img/img1.jpg" alt="Descrição da imagem" width="300" height="200" style="border-radius: 50px;"><!-- Imagem -->           
+            <button class="next" onclick="imgProx()">&#10095;</button><!-- Botão para a próxima imagem -->
         </div>
+        <!-- Parágrafo com informações sobre mim -->
         <p>Desde pequeno, sempre fui conhecido por minha tranquilidade. É raro me ver perder o controle, pois prefiro encarar a vida com calma e determinação. Mas não se engane, por trás dessa serenidade, existe um espírito aventureiro ávido por novas experiências.<br><br>
             Uma das minhas grandes paixões são os gatos. A graça felina sempre me encantou, e compartilhar a vida com esses animais tão independentes e carinhosos é algo que me traz imensa felicidade.<br><br>
             No momento, estou embarcando em uma jornada acadêmica no campo da análise e desenvolvimento de sistemas. Entre todas as áreas fascinantes que essa disciplina oferece, meu interesse especial recai sobre a administração de bancos de dados. Acredito que minha vocação está em organizar e otimizar informações para tornar sistemas mais eficientes e poderosos.<br><br>
             Profissionalmente, sou um entusiasta do suporte técnico, onde adquiri valiosos conhecimentos sobre bancos de dados. É gratificante poder ajudar os outros a resolver problemas e facilitar suas vidas tecnológicas.<br><br>
             Apesar da minha calma, um dos meus maiores prazeres é a natação. Sentir a água ao meu redor é uma sensação indescritível que me revitaliza.</p>
     </section>
-    
+    <!-- Script para controlar o slideshow de imagens -->
     <script>
         var currentImageIdx = 0;
         var images = [
-    "img/img1.jpg",
-    "img/img2.jpg",
-    "img/img3.jpg",
-    "img/img4.jpg",
-    "img/img5.jpg",
-    "img/img6.jpg",
-    "img/img7.jpg"
-];   
+            "img/img1.jpg",
+            "img/img2.jpg",
+            "img/img3.jpg",
+            "img/img4.jpg",
+            "img/img5.jpg",
+            "img/img6.jpg",
+            "img/img7.jpg"
+        ];   
     </script>
-    <footer>
-        <p>&copy; Lucas Netto RU - 4250816</p><!-- Rodapé com informações sobre meu nome e RU -->
+    <footer><!-- Rodapé da página -->
+        <p>&copy; Lucas Netto RU - 4250816</p> <!-- Rodapé com informações sobre meu nome e RU -->
     </footer>
 </body>
 </html>
