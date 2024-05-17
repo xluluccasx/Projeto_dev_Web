@@ -101,7 +101,7 @@ footer {
     display: block; /* Torna a imagem um bloco para permitir o uso de margens e preenchimentos */
     max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
     height: auto; /* Permite que a altura seja ajustada automaticamente */
-    margin: 0 auto; /* Centraliza horizontalmente a imagem */
+    margin: 0 auto; /* Centraliza horizontalmente a imagems */
 }
 
 .slideshow {
