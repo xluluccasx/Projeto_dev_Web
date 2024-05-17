@@ -18,12 +18,50 @@
             </ul>
         </nav>
     </section>
-   <section id="portfolio">
+    <section id="portfolio">
+        <h2 style="text-align: center;">Portfólio</h2>
+        <div class="slideshow">
+            <button class="prev" onclick="imgAntp()">&#10094;</button>
+            <img class="imagem" id="portfolio-image" src="img/port1.jpg" width="300" height="200">
+            <button class="next" onclick="imgProxp()">&#10095;</button>
+        </div>
+        <p id="portfolio-description"></p>
+    </section>
+
+   <script>
+    window.onload = function() {
+        alert("Bem-vindo ao meu portfólio! \n\nDurante o curso, desenvolvi alguns códigos de aplicações, porém nenhum deles foram desenvolvidos com a parte gráfica, então, deixarei aqui prints das saidas de consoles com as explicações do que se referem");
+        updateImagep();
+    };
+    var currentImageIdx = 0;
+    var images = [
+"img/port1.jpg",
+"img/port2.jpg",
+"img/port3.jpg",
+"img/port4.jpg",
+"img/port5.jpg",
+"img/port6.jpg",
+"img/port7.jpg",
+"img/port8.jpg",
+"img/port9.jpg",
+"img/port10.jpg"
+];   
+
+var descriptions = [
+    "Saída do console de um apicativo para uma loja de vendas \nUma das estratégias da mesma é dar desconto quando maior for a quantidade de unidades \nO console mostra a compra de um produto, onde a quantidade é maior que 10.\nO desconto para quantidades entre 5 e 19 era de 3%",
+    "Saída do console de um apicativo para uma Pizzaria \nPrecisaria constar as entradas do usuario com o tamanho de pizza, codigo do sabor da pizza, e perguntar se desejava mais alguma coisa \nCaso o usuario digitasse algum tamanho invalido, deveria retornar mensagem de opção invalida \nA saida do consele deveria ser com duas pizzas selecionadas (utilizando a repetição do codigo para solicitar novamente ao usuario o tamanho e sabor) e retornar no final o valor somado e individual",
+    "Mesmo enunciado da imagem anterior porem no console precisaria constar a mensagem caso o usuario digitasse um código incorreto",
+    "Saída do console de um aplicativo para um restaurante que serve feijoada \nFoi apresentada a seguinte formula para o desenvolvimento da cobrança das feijoadas: Total=(volume*opção)+adicional(is) \n(foram apresentadas algumas tabelas com valores dos adicionais) \nNas saidas de consoles precisava constar a seguinte questão: um pedido com volume, opção e 2 acompanhamentos validos",
+    "Mesmo enunciado da imagem anterior porem no console precisaria constar \nUm tratamento de ERRO quando digitado um valor não numerico e uma opção não permitida no (menu opção de feijoada)",
+    "Saída do console de um aplicativo de controle de estoque de uma marcenaria\n deveriamos criar algumas funções para consultar todos os produtos, consulta por código, consulta por fabricante, Etc \nNesta primeira a imagem é referente ao cadastro de 3 produtos sendo 2 deles do mesmo fabricante",
+    "Mesmo enunciado da imagem anterior porem no console precisaria constar \nA consulta de TODOS os produtos cadastrados",
+    "Mesmo enunciado da imagem deste exercicio da marcenaria porem no console precisaria constar \nA consulta por CÓDIGO do produto",
+    "Mesmo enunciado da imagem deste exercicio da marcenaria porem no console precisaria constar \nA consulta por FABRICANTE do produto",
+    "Mesmo enunciado da imagem deste exercicio da marcenaria porem no console precisaria constar \nA REMOÇÃO de algum produto cadastrado e mostrar todos os produtos restantes"
+];
 
 
-    <h2>Portfólio</h2>
-    <p>Durante o curso, desenvolvi algumas aplicações, porem nenhuma delas foi desenvolvida a parte gráfica, então deixarei aqui os prints das saidas do console apenas</p>
-   </section>
+</script>
    <footer>
     <p>&copy; Lucas Netto RU - 4250816</p>
 </footer>
