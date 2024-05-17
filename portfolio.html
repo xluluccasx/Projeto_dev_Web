@@ -4,66 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Netto - Portfólio</title>
-    <link rel="stylesheet" href="estilo.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="estilo.css"> <!-- Link para o arquivo de estilo CSS -->
+    <script src="script.js"></script> <!-- Script JavaScript -->
 </head>
 <body>
     <header>
-        <h1>Lucas Netto</h1>
+        <h1>Lucas Netto</h1> <!-- Título principal -->
     </header>
     <section id="botoes">
         <nav>
             <ul>
-                <li><a href='index.html'>Voltar</a></li>
+                <li><a href='index.html'>Voltar</a></li> <!-- Botão de voltar -->
             </ul>
         </nav>
     </section>
     <section id="portfolio">
-        <h2 style="text-align: center;">Portfólio</h2>
-        <div class="slideshow">
-            <button class="prev" onclick="imgAntp()">&#10094;</button>
-            <img class="imagem" id="portfolio-image" src="img/Port1.jpg" width="300" height="200">
-            <button class="next" onclick="imgProxp()">&#10095;</button>
+        <h2 style="text-align: center;">Portfólio</h2> <!-- Título da seção -->
+        <div class="slideshow"> <!-- Slideshow para exibição das imagens -->
+            <button class="prev" onclick="imgAntp()">&#10094;</button> <!-- Botão anterior -->
+            <img class="imagem" id="portfolio-image" src="img/Port1.jpg" width="300" height="200"> <!-- Imagem do portfólio -->
+            <button class="next" onclick="imgProxp()">&#10095;</button> <!-- Botão próximo -->
         </div>
-        <p id="portfolio-description"></p>
+        <p id="portfolio-description"></p> <!-- Descrição do portfólio -->
     </section>
 
-   <script>
+    <script>
+    // Script JavaScript para exibição das imagens do portfólio
     window.onload = function() {
-        alert("Bem-vindo ao meu portfólio! \n\nDurante o curso, desenvolvi alguns códigos de aplicações, porém nenhum deles foram desenvolvidos com a parte gráfica, então, deixarei aqui prints das saidas de consoles com as explicações do que se referem");
-        updateImagep();
+        alert("Bem-vindo ao meu portfólio! \n\nDurante o curso, desenvolvi alguns códigos de aplicações, porém nenhum deles foram desenvolvidos com a parte gráfica, então, deixarei aqui prints das saídas de consoles com as explicações do que se referem"); // Alerta de boas-vindas
+        updateImagep(); // Função para atualizar a imagem do portfólio
     };
-    var currentImageIdx = 0;
+    var currentImageIdx = 0; // Índice atual da imagem
     var images = [
-"img/Port1.jpg",
-"img/Port2.jpg",
-"img/Port3.jpg",
-"img/Port4.jpg",
-"img/Port5.jpg",
-"img/Port6.jpg",
-"img/Port7.jpg",
-"img/Port8.jpg",
-"img/Port9.jpg",
-"img/Port10.jpg"
-];   
+        "img/Port1.jpg",
+        "img/Port2.jpg",
+        "img/Port3.jpg",
+        "img/Port4.jpg",
+        "img/Port5.jpg",
+        "img/Port6.jpg",
+        "img/Port7.jpg",
+        "img/Port8.jpg",
+        "img/Port9.jpg",
+        "img/Port10.jpg"
+    ]; // Array com os caminhos das imagens do portfólio
 
-var descriptions = [
-    "Saída do console de um apicativo para uma loja de vendas \nUma das estratégias da mesma é dar desconto quando maior for a quantidade de unidades \nO console mostra a compra de um produto, onde a quantidade é maior que 10.\nO desconto para quantidades entre 5 e 19 era de 3%",
-    "Saída do console de um apicativo para uma Pizzaria \nPrecisaria constar as entradas do usuario com o tamanho de pizza, codigo do sabor da pizza, e perguntar se desejava mais alguma coisa \nCaso o usuario digitasse algum tamanho invalido, deveria retornar mensagem de opção invalida \nA saida do consele deveria ser com duas pizzas selecionadas (utilizando a repetição do codigo para solicitar novamente ao usuario o tamanho e sabor) e retornar no final o valor somado e individual",
-    "Mesmo enunciado da imagem anterior porem no console precisaria constar a mensagem caso o usuario digitasse um código incorreto",
-    "Saída do console de um aplicativo para um restaurante que serve feijoada \nFoi apresentada a seguinte formula para o desenvolvimento da cobrança das feijoadas: Total=(volume*opção)+adicional(is) \n(foram apresentadas algumas tabelas com valores dos adicionais) \nNas saidas de consoles precisava constar a seguinte questão: um pedido com volume, opção e 2 acompanhamentos validos",
-    "Mesmo enunciado da imagem anterior porem no console precisaria constar \nUm tratamento de ERRO quando digitado um valor não numerico e uma opção não permitida no (menu opção de feijoada)",
-    "Saída do console de um aplicativo de controle de estoque de uma marcenaria\n deveriamos criar algumas funções para consultar todos os produtos, consulta por código, consulta por fabricante, Etc \nNesta primeira a imagem é referente ao cadastro de 3 produtos sendo 2 deles do mesmo fabricante",
-    "Mesmo enunciado da imagem anterior porem no console precisaria constar \nA consulta de TODOS os produtos cadastrados",
-    "Mesmo enunciado da imagem deste exercicio da marcenaria porem no console precisaria constar \nA consulta por CÓDIGO do produto",
-    "Mesmo enunciado da imagem deste exercicio da marcenaria porem no console precisaria constar \nA consulta por FABRICANTE do produto",
-    "Mesmo enunciado da imagem deste exercicio da marcenaria porem no console precisaria constar \nA REMOÇÃO de algum produto cadastrado e mostrar todos os produtos restantes"
-];
+    var descriptions = [
+        "Saída do console de um aplicativo para uma loja de vendas\nUma das estratégias da mesma é dar desconto quando maior for a quantidade de unidades\nO console mostra a compra de um produto, onde a quantidade é maior que 10.\nO desconto para quantidades entre 5 e 19 era de 3%", // Descrição da primeira imagem
+        "Saída do console de um aplicativo para uma Pizzaria\nPrecisaria constar as entradas do usuário com o tamanho de pizza, código do sabor da pizza, e perguntar se desejava mais alguma coisa\nCaso o usuário digitasse algum tamanho inválido, deveria retornar mensagem de opção inválida\nA saída do console deveria ser com duas pizzas selecionadas (utilizando a repetição do código para solicitar novamente ao usuário o tamanho e sabor) e retornar no final o valor somado e individual", // Descrição da segunda imagem
+        "Mesmo enunciado da imagem anterior, porém no console precisaria constar a mensagem caso o usuário digitasse um código incorreto", // Descrição da terceira imagem
+        "Saída do console de um aplicativo para um restaurante que serve feijoada\nFoi apresentada a seguinte fórmula para o desenvolvimento da cobrança das feijoadas: Total=(volume*opção)+adicional(is)\n(foram apresentadas algumas tabelas com valores dos adicionais)\nNas saídas de consoles precisava constar a seguinte questão: um pedido com volume, opção e 2 acompanhamentos válidos", // Descrição da quarta imagem
+        "Mesmo enunciado da imagem anterior, porém no console precisaria constar um tratamento de ERRO quando digitado um valor não numérico e uma opção não permitida no (menu opção de feijoada)", // Descrição da quinta imagem
+        "Saída do console de um aplicativo de controle de estoque de uma marcenaria\ndeveriamos criar algumas funções para consultar todos os produtos, consulta por código, consulta por fabricante, Etc\nNesta primeira a imagem é referente ao cadastro de 3 produtos sendo 2 deles do mesmo fabricante", // Descrição da sexta imagem
+        "Mesmo enunciado da imagem anterior, porém no console precisaria constar a consulta de TODOS os produtos cadastrados", // Descrição da sétima imagem
+        "Mesmo enunciado da imagem deste exercício da marcenaria, porém no console precisaria constar a consulta por CÓDIGO do produto", // Descrição da oitava imagem
+        "Mesmo enunciado da imagem deste exercício da marcenaria, porém no console precisaria constar a consulta por FABRICANTE do produto", // Descrição da nona imagem
+        "Mesmo enunciado da imagem deste exercício da marcenaria, porém no console precisaria constar a REMOÇÃO de algum produto cadastrado e mostrar todos os produtos restantes" // Descrição da décima imagem
+    ];
+    </script>
 
-
-</script>
    <footer>
-    <p>&copy; Lucas Netto RU - 4250816</p>
+    <p>&copy; Lucas Netto RU - 4250816</p> <!-- Rodapé com informações sobre o autor -->
 </footer>
 </body>
 </html>
