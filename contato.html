@@ -20,24 +20,34 @@
     </section>
     <section id="Contato">
         <h2>Contato</h2>
-        <form id="formulario-contato">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-            <button type="submit">Enviar</button>
+        <form id="enviarEmail" action="envioEmail.php" method="POST">
+            <div class="row">
+                <div class="form-group col-md-5">
+                    <div class="form-control-custom">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control form-control-lg py-3 text-2 mt-2" id="nome" name="nome" placeholder="Nome Completo" required>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <div class="form-control-custom">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control form-control-lg py-3 text-2 mt-2" id="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="form-control-custom">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" class="form-control form-control-lg py-3 text-2 mt-2" name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-3">
+                <button type="submit" class="btn btn-primary font-weight-bold text-uppercase py-3 w-100 mt-2">Enviar Agora</button>
+            </div>
         </form>
     </section>
     <footer>
         <p>&copy; Lucas Netto RU - 4250816</p>
     </footer>
-    <script>
-        document.getElementById('formulario-contato').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Para envio do email, precisaria configurar um serv SMTP, não irei realizar esta configuração'); 
-        });
-    </script>
 </body>
 </html>
