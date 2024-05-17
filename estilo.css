@@ -123,7 +123,6 @@ footer {
     transition: background-color 0.3s, color 0.3s;
 }
 
-
 .prev:hover, .prev:focus,
 .next:hover, .next:focus {
     background-color: #292929;
@@ -136,10 +135,6 @@ footer {
 
 .next {
     right: 10px;
-}
-
-#Contato {
-    text-align: center; /* Alinha o conteúdo ao centro horizontalmente */
 }
 
 .form-group {
