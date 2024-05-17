@@ -1,5 +1,6 @@
 //------------------Sobre_inicio--------------------//
 
+// Função para exibir a imagem anterior
 function imgAnt() {
     if (currentImageIdx > 0) {
         currentImageIdx--;
@@ -9,6 +10,7 @@ function imgAnt() {
     updateImage();
 }
 
+// Função para exibir a próxima imagem
 function imgProx() {
     if (currentImageIdx < images.length - 1) {
         currentImageIdx++;
@@ -18,6 +20,7 @@ function imgProx() {
     updateImage();
 }
 
+// Função para atualizar a imagem exibida
 function updateImage() {
     var imageElement = document.querySelector('.imagem');
     imageElement.src = images[currentImageIdx];
@@ -26,8 +29,8 @@ function updateImage() {
 
 //------------------index_inicio--------------------//
 
+// Função para carregar uma página usando fetch
 function carregarPagina(pagina) {
-    // Usa fetch() para carregar o conteúdo da página
     fetch(pagina)
     .then(response => response.text())
     .then(data => {
@@ -42,6 +45,7 @@ function carregarPagina(pagina) {
 
 //------------------Portfolio_inicio--------------------//
 
+// Função para atualizar a imagem exibida no portfólio
 function updateImagep() {
     var imageElement = document.getElementById("portfolio-image");
     var descriptionElement = document.getElementById("portfolio-description");
@@ -49,6 +53,7 @@ function updateImagep() {
     descriptionElement.innerHTML = descriptions[currentImageIdx].replace(/\n/g, "<br>"); // Substitui \n por <br> para quebras de linha no HTML
 }
 
+// Função para exibir a imagem anterior no portfólio
 function imgAntp() {
     if (currentImageIdx > 0) {
         currentImageIdx--;
@@ -58,6 +63,7 @@ function imgAntp() {
     updateImagep();
 }
 
+// Função para exibir a próxima imagem no portfólio
 function imgProxp() {
     if (currentImageIdx < images.length - 1) {
         currentImageIdx++;
