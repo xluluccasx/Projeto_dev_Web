@@ -4,7 +4,7 @@ import asyncio
 
 intents = discord.Intents.all()
 bot = commands.Bot(".", intents=intents)
-Token = "MTM2NTA5NTM0NzM4MjI1OTc3NA.Gh000G.dwXVZ41euq-BhBpF5bBlV5EuJtozO4g7FgPCBw"
+Token = "MTM2NTA5NTM0NzM4MjI1OTc3NA.GF3NUb.Eh4VELqxHWjO6XrtUwHH8dI-5fM7gnWrzF0d7c"
 
 
 @bot.event
